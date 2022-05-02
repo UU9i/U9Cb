@@ -26,7 +26,7 @@
     * 只能两个两个合并
 
 # 系统需求
-* WIN7/10/11
+* WIN10/11
 * [.NET Framework 4.7.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472)
 
 # 其他
