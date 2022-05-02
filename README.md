@@ -24,6 +24,18 @@
   * 调用Cmd运行Copy/b指令
     * 用于合并图片与压缩包
     * 只能两个两个合并
+
+# 系统需求
+* WIN7/10/11
+* [.NET Framework 4.7.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472)
+
+# 其他
+* 按ESC关闭软件
+* 右上角可选是否置顶
+* 操作结果部分不可逆 使用前不确定结果建议先备份文件
+* [下载](https://github.com/UU9i/U9Cb/releases)
+ 
+
 # 部分功能演示
 * 删除
   * ![删除](https://github.com/UU9i/U9Cb/blob/main/images/%E5%AF%B9%E6%96%87%E4%BB%B6-%E5%88%A0%E9%99%A4.gif)
@@ -52,12 +64,6 @@
 * CopyB
   * ![CopyB](https://github.com/UU9i/U9Cb/blob/main/images/CopyB.gif)
 
-# 其他
-* 按ESC关闭软件
-* 右上角可选是否置顶
-* 操作结果部分不可逆 使用前不确定结果建议先备份文件
-* [下载](https://github.com/UU9i/U9Cb/releases)
+# 代码写太臭所以没 
 
-
-# 代码写太臭所以没  
  
