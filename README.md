@@ -55,5 +55,9 @@
 # 其他
 * 按ESC关闭软件
 * 右上角可选是否置顶
-* [下载](https://github.com/UU9i/U9Cb/releases)    
+* 操作结果部分不可逆 使用前不确定结果建议先备份文件
+* [下载](https://github.com/UU9i/U9Cb/releases)
+
+
+# 代码写太臭所以没  
  
