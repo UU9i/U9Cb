@@ -35,7 +35,8 @@
 * 拖入文件数量过多会卡住 等等就好
 * 操作结果部分不可逆 使用前不确定结果建议先备份文件
 * [下载](https://github.com/UU9i/U9Cb/releases/download/U9Cb/U9Cb.exe)
- 
+
+# 代码很烂 手下留情
 
 # 部分功能演示
 * 删除
