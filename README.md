@@ -65,6 +65,5 @@
 * CopyB
   * ![CopyB](https://github.com/UU9i/U9Cb/blob/main/images/CopyB.gif)
 
-# 代码写太臭所以没 
 
  
