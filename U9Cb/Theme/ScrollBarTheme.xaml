@@ -1,0 +1,116 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--  1.确定参数  -->
+    <!--纵向滚动条宽度-->
+    <sys:Double   x:Key="VerticalScrollBarThickness">4</sys:Double>
+    <!--纵向轨道背景色-->
+    <SolidColorBrush x:Key="VerticalTrackBackgroundBrush" Color="Transparent" />
+    <!--纵向滑块颜色-->
+    <SolidColorBrush x:Key="VerticalTrackThumbBackgroundBrush" Color="#cccccc" />
+    <!--纵向滑块圆角-->
+    <CornerRadius x:Key="VerticalThumbCornerRadius"  >2</CornerRadius>
+    <!--横向滚动条宽度-->
+    <sys:Double x:Key="HorizontalScrollBarThickness">4</sys:Double>
+    <!--横向轨道背景色-->
+    <SolidColorBrush x:Key="HorizontalTrackBackgroundBrush" Color="Transparent" />
+    <!--横向滑块颜色-->
+    <SolidColorBrush x:Key="HorizontalTrackThumbBackgroundBrush" Color="#cccccc" />
+    <!--横向滑块圆角-->
+    <CornerRadius x:Key="HorizontalThumbCornerRadius" >2</CornerRadius>
+
+    <!-- 2.定义Style  -->
+    <Style TargetType="ScrollBar">
+        <Style.Triggers>
+            <Trigger Property="Orientation" Value="Horizontal">
+                <Setter Property="Width" Value="Auto" />
+                <Setter Property="Height" Value="{DynamicResource HorizontalScrollBarThickness}" />
+                <Setter Property="Template" Value="{DynamicResource HorizontalScrollBar}" />
+            </Trigger>
+            <Trigger Property="Orientation" Value="Vertical">
+                <Setter Property="Width" Value="{DynamicResource VerticalScrollBarThickness}" />
+                <Setter Property="Height" Value="Auto" />
+                <Setter Property="Template" Value="{DynamicResource VerticalScrollBar}" />
+            </Trigger>
+        </Style.Triggers>
+        <Setter Property="ContextMenu" Value="{x:Null}"/>
+    </Style>
+
+    <!-- 3.定义template  -->
+    <!-- 纵向滚动条template  -->
+    <ControlTemplate x:Key="VerticalScrollBar" TargetType="{x:Type ScrollBar}">
+        <Border Width="{DynamicResource VerticalScrollBarThickness}" Background="{DynamicResource VerticalTrackBackgroundBrush}" Margin="10,10,0,10">
+            <Track 
+                Name="PART_Track"
+                IsDirectionReversed="true">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton Command="ScrollBar.PageUpCommand" Focusable="False">
+                        <RepeatButton.Template>
+                            <ControlTemplate>
+                                <Border Background="Transparent"></Border>
+                            </ControlTemplate>
+                        </RepeatButton.Template>
+                    </RepeatButton>
+                </Track.DecreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb Width="{TemplateBinding Width}"  Focusable="False">
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <Border Background="{DynamicResource VerticalTrackThumbBackgroundBrush}" 
+                                        
+                                        CornerRadius="{DynamicResource VerticalThumbCornerRadius}" />
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton Command="ScrollBar.PageDownCommand" Focusable="False">
+                        <RepeatButton.Template>
+                            <ControlTemplate>
+                                <Border Background="Transparent"></Border>
+                            </ControlTemplate>
+                        </RepeatButton.Template>
+                    </RepeatButton>
+                </Track.IncreaseRepeatButton>
+            </Track>
+        </Border>
+    </ControlTemplate>
+    <!-- 横向滚动条template  -->
+    <ControlTemplate x:Key="HorizontalScrollBar" TargetType="{x:Type ScrollBar}">
+        <Grid Background="{DynamicResource HorizontalTrackBackgroundBrush}" Margin="10,10,10,0">
+            <Track
+                Name="PART_Track"
+                Grid.Column="1"
+                IsDirectionReversed="False">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton Command="ScrollBar.PageLeftCommand" Focusable="False">
+                        <RepeatButton.Template>
+                            <ControlTemplate>
+                                <Border Background="Transparent"></Border>
+                            </ControlTemplate>
+                        </RepeatButton.Template>
+                    </RepeatButton>
+                </Track.DecreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb Height="{TemplateBinding Height}" >
+                        <Thumb.Template>
+                            <ControlTemplate>
+                                <Border Background="{DynamicResource HorizontalTrackThumbBackgroundBrush}"   CornerRadius="{DynamicResource HorizontalThumbCornerRadius}" />
+                            </ControlTemplate>
+                        </Thumb.Template>
+                    </Thumb>
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton Command="ScrollBar.PageRightCommand" Focusable="False">
+                        <RepeatButton.Template>
+                            <ControlTemplate>
+                                <Border Background="Transparent"></Border>
+                            </ControlTemplate>
+                        </RepeatButton.Template>
+                    </RepeatButton>
+                </Track.IncreaseRepeatButton>
+            </Track>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

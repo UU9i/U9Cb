@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="U9Cb.MVVM.View.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:U9Cb.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+    <StackPanel>
+        <TextBlock
+                   FontSize="28"
+                   Foreground="Purple"
+                   HorizontalAlignment="Left"
+                   FontWeight="Bold"
+                   Margin="0,0,0,10"><Run Language="zh-cn" Text="版本1.0"/></TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <Border Width="650"
+                    Height="400">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#FFAA85FD" Offset="0.0"/>
+                        <GradientStop Color="#844eff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,650,400"/>
+                </Border.Clip>
+                <Grid>
+
+                    <StackPanel>
+                        <TextBlock Text="都是比较另类的功能&#xA;若单纯批量改名建议用其他更好的软件&#xA;使用前请先看使用方法&#xA;以免造成损失"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,10,0" />
+
+                        <TextBlock 
+                                   x:Name="RandomTextBlock"
+                                   Text="心情会变好!"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Margin="20,60,10,0"
+                                   FontWeight="Bold"
+                                   Loaded="RandomTextBlock_Loaded"/>
+
+
+                        <TextBlock 
+                            Text=""
+                            Foreground="White"
+                            FontSize="18"
+                            Margin="20,80,10,0">
+                            <Hyperlink 
+                                NavigateUri="https://github.com/UU9i/U9Cb"
+                                Click="Hyperlink_Click"
+                                >
+                                GitHub
+                            </Hyperlink>
+                        </TextBlock>
+
+                        <TextBlock Text="By 幽幽九"
+                                   Foreground="#FF833EED"
+                                   FontSize="10"
+                                   Margin="590,40,10,0"/>
+
+                    </StackPanel>
+
+                </Grid>
+
+            </Border>
+
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>
